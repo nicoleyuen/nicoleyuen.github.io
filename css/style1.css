@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    /* hidden is for the content to be invisible. w/o it the bar doesnt show up */
+      background-color: lightpink;
+    /*    the color of the bar*/
+
+}
+
+li {
+     float: left;
+    /*    this makes the clickable links on the left side*/
+}
+
+li a {
+      display: inline-block;
+    /*    it is inline element, but can adjust height and width values*/
+      color: white;
+      text-align: center;
+      padding: 18px 20px;
+    /*    height and width*/
+      text-decoration: none;
+    /*    to keep the underline away from the font*/
+}
+
+
+
+li a:hover {
+ background: black;
+/*    a move over the link is hover where if i hover my mouse over the bar it will be black!!!!*/
+}
+
+/*
+ selected link
+a:active {
+  color: yellow;
+}
+*/
+
+
+
+/* .active {
+  background-color: #4CAF50;
+} */
+
+.grid-container {
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  max-width: 75rem;
+  margin: 0 auto; }
+  @media print, screen and (min-width: 40em) {
+    .grid-container {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  .grid-container.fluid {
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    max-width: 100%;
+    margin: 0 auto; }
+    @media print, screen and (min-width: 40em) {
+      .grid-container.fluid {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+  .grid-container.full {
+    padding-right: 0;
+    padding-left: 0;
+    max-width: 100%;
+    margin: 0 auto; }
+
+.grid-x {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+
+.cell {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  min-height: 0px;
+  min-width: 0px;
+  width: 100%; }
+  .cell.auto {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0px;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0px; }
+  .cell.shrink {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto; }
+
+            .grid-padding-x .grid-padding-x {
+              margin-right: -0.625rem;
+              margin-left: -0.625rem; }
+              @media print, screen and (min-width: 40em) {
+                .grid-padding-x .grid-padding-x {
+                  margin-right: -0.9375rem;
+                  margin-left: -0.9375rem; } }
+
+            .grid-container:not(.full) > .grid-padding-x {
+              margin-right: -0.625rem;
+              margin-left: -0.625rem; }
+              @media print, screen and (min-width: 40em) {
+                .grid-container:not(.full) > .grid-padding-x {
+                  margin-right: -0.9375rem;
+                  margin-left: -0.9375rem; } }
+
+            .grid-padding-x > .cell {
+              padding-right: 0.625rem;
+              padding-left: 0.625rem; }
+              @media print, screen and (min-width: 40em) {
+                .grid-padding-x > .cell {
+                  padding-right: 0.9375rem;
+                  padding-left: 0.9375rem; } }
+
+
+
+
+
+.callout {
+  /* position: relative; */
+  margin: 0 0 .6rem 0;
+  padding: 2rem;
+  border: 1px solid rgba(10, 10, 10, 0.25);
+  background-color: white;
+  color: #0a0a0a; }
+  .callout > :first-child {
+    margin-top: 0; }
+  .callout > :last-child {
+    margin-bottom: 0; }
+  .callout.primary {
+    background-color: pink;
+    color:  black; }
+
+  /* .callout.small {
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem; } */
+  /* .callout.large {
+    padding-top: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 3rem; } */
+
+
+
+
+    
