@@ -7,12 +7,21 @@
 // https://www.youtube.com/playlist?list=PLRqwX-V7Uu6aFcVjlDAkkGIixw70s7jpW
 
 
+let song;
 
+function preload() {
+  song = loadSound('../assets/music/astronomy-self-texture.mp3')
+}
 
 function setup() {
-
+song.play();
 }
 
 function draw() {
 
 }
+ function mousePressed(){
+   // song.play();
+song.setVolume(0.3);
+   song.loop();
+ }
