@@ -4,87 +4,43 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
+    <title>Nicole</title>
     <link rel="stylesheet" href="css/style1.css">
 
 
 
-<ul>
-    <li><a href="index.html"> Main</a></li>
-    <li><a href="p1.html"> Project 1</a></li>
-    <li><a href="p2.html"> Project 2</a></li>
-    <li><a href="pj3.html"> P3.1</a></li>
-    <li><a href="p3.html"> Project3</a></li>
-</ul>
+<div class="container">
+  
+  <a class="toggle open" id="open" href="#nav">OPEN</a>
+
+  <nav id="nav" role="navigation">  
+    <a class="toggle close" id="close" href="#">×</a>
+    <ul>
+                    <li onclick="select(this)">
+<!-- onclick is like a mousemove where my mouse makes the effect when I hover over it -->
+                        
+                      <a href=""> <span>Home</span> </a>
+                    </li>
+                    <li onclick="select(this)">
+                       <a href=""> <span>About</span> </a>
+                    </li>
+                 <li onclick="select(this)">
+                         <a href=""> <span>Gallery</span> </a>
+                    </li> 
+                    <li onclick="select(this)">
+                        <a href=""> <span>Contacts</span> </a>
+                    </li>
+                  <li onclick="select(this)">
+                        <a href=""> <span>IDK</span> </a>
+                    </li> 
+                </ul>
+  </nav>
+</div>
 
   </head>
 
   <body>
-    <div class="grid-container">
-      <div class="grid-x grid-padding-x">
-        <div class="large-12 cell">
-          <h1>Welcome to Foundation</h1>
-        </div>
-      </div>
-
-      <div class="grid-x grid-padding-x">
-        <div class="large-12 cell">
-          <div class="callout">
-            <h3>We&rsquo;re stoked you want to try Foundation! </h3>
-            <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-            <p>Once you've exhausted the fun in this document, you should check out:</p>
-            <div class="grid-x grid-padding-x">
-              <div class="large-4 medium-4 cell">
-                <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-              </div>
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-          <!-- Grid Example -->
-
-          <div class="grid-x grid-padding-x">
-            <div class="large-12 cell">
-              <div class="primary callout">
-                <p><strong>This is a twelve cell section in a grid-x.</strong> Each of these includes a div.callout element so you can see where the cell are - it's not required at all for the grid.</p>
-              </div>
-            </div>
-          </div>
-          <div class="grid-x grid-padding-x">
-            <div class="large-6 medium-6 cell">
-              <div class="primary callout">
-                <p>Six cell</p>
-              </div>
-            </div>
-            <div class="large-6 medium-6 cell">
-              <div class="primary callout">
-                <p>Six cell</p>
-              </div>
-            </div>
-          </div>
-          <div class="grid-x grid-padding-x">
-            <div class="large-4 medium-4 small-4 cell">
-              <div class="primary callout">
-                <p>Four cell</p>
-              </div>
-            </div>
-            <div class="large-4 medium-4 small-4 cell">
-              <div class="primary callout">
-                <p>Four cell</p>
-              </div>
-            </div>
-            <div class="large-4 medium-4 small-4 cell">
-              <div class="primary callout">
-                <p>Four cell</p>
-              </div>
-            </div>
-          </div>
-
-          <hr />
+    
 
   </body>
 </html>

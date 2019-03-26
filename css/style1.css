@@ -1,161 +1,181 @@
-@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+html,body{
+    font-family: Orbitron;
+    }
+/* this is a font i will be using on the webpage */
+/* --------------------------------------------------------- */
 
-ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    /* hidden is for the content to be invisible. w/o it the bar doesnt show up */
-      background-color: lightpink;
-    /*    the color of the bar*/
 
+/* ------------my nav for when webpage is full size-------- */
+nav a {
+    text-decoration: none;
+    color: rgb(104, 0, 191, 1) ;
+/*   a color over my tect bubbles */
+/* this is to get rid of the stupid underline for the aref links */
+  }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  transition: all .3s ease-in-out;
 }
 
-li {
-     float: left;
-    /*    this makes the clickable links on the left side*/
+/* The item thingy when it's small */
+.container > * {
+/*   color: #353535; */
+  /*   the color of the text when it's smol */
+  font-size: 1.2em;
+  line-height: 1.9;
+/*   how big the bubbles are */
+  padding: 25px;
+/*   thickness of my bar */
+  background: rgb(67, 361, 247,0.4);
+  
+  
 }
 
-li a {
-      display: inline-block;
-    /*    it is inline element, but can adjust height and width values*/
-      color: white;
-      text-align: center;
-      padding: 18px 20px;
-    /*    height and width*/
-      text-decoration: none;
-    /*    to keep the underline away from the font*/
+/* ----------------For the nav side bar when small---------- */
+.container nav {
+  background: rgb(0, 171, 255, 0.2);
 }
 
-
-
-li a:hover {
- background: black;
-/*    a move over the link is hover where if i hover my mouse over the bar it will be black!!!!*/
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
 }
 
-/*
- selected link
-a:active {
-  color: yellow;
-}
-*/
-
-
-
-/* .active {
-  background-color: #4CAF50;
-} */
-
-.grid-container {
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  max-width: 75rem;
-  margin: 0 auto; }
-  @media print, screen and (min-width: 40em) {
-    .grid-container {
-      padding-right: 0.9375rem;
-      padding-left: 0.9375rem; } }
-  .grid-container.fluid {
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
-    max-width: 100%;
-    margin: 0 auto; }
-    @media print, screen and (min-width: 40em) {
-      .grid-container.fluid {
-        padding-right: 0.9375rem;
-        padding-left: 0.9375rem; } }
-  .grid-container.full {
-    padding-right: 0;
-    padding-left: 0;
-    max-width: 100%;
-    margin: 0 auto; }
-
-.grid-x {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap; }
-
-.cell {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  min-height: 0px;
-  min-width: 0px;
-  width: 100%; }
-  .cell.auto {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 1 0px;
-        -ms-flex: 1 1 0px;
-            flex: 1 1 0px; }
-  .cell.shrink {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto; }
-
-            .grid-padding-x .grid-padding-x {
-              margin-right: -0.625rem;
-              margin-left: -0.625rem; }
-              @media print, screen and (min-width: 40em) {
-                .grid-padding-x .grid-padding-x {
-                  margin-right: -0.9375rem;
-                  margin-left: -0.9375rem; } }
-
-            .grid-container:not(.full) > .grid-padding-x {
-              margin-right: -0.625rem;
-              margin-left: -0.625rem; }
-              @media print, screen and (min-width: 40em) {
-                .grid-container:not(.full) > .grid-padding-x {
-                  margin-right: -0.9375rem;
-                  margin-left: -0.9375rem; } }
-
-            .grid-padding-x > .cell {
-              padding-right: 0.625rem;
-              padding-left: 0.625rem; }
-              @media print, screen and (min-width: 40em) {
-                .grid-padding-x > .cell {
-                  padding-right: 0.9375rem;
-                  padding-left: 0.9375rem; } }
-
-
-
-
-
-.callout {
-  /* position: relative; */
-  margin: 0 0 .6rem 0;
-  padding: 2rem;
-  border: 1px solid rgba(10, 10, 10, 0.25);
-  background-color: white;
-  color: #0a0a0a; }
-  .callout > :first-child {
-    margin-top: 0; }
-  .callout > :last-child {
-    margin-bottom: 0; }
-  .callout.primary {
-    background-color: pink;
-    color:  black; }
-
-  /* .callout.small {
-    padding-top: 0.5rem;
-    padding-right: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.5rem; } */
-  /* .callout.large {
-    padding-top: 3rem;
-    padding-right: 3rem;
-    padding-bottom: 3rem;
-    padding-left: 3rem; } */
-
-
-
-
+/* ------------Media query to change color when shrunk--------------- */
+@media only screen and (min-width: 600px) {
+  
     
+  /* grid */
+  .container {
+    grid-template-columns: repeat(5, 1fr);
+   
+  }
+  
+  .container nav{
+    grid-column: span 6;
+  }
+
+  
+  /* ----------------Grid/ my css animation when hovered-------------- */
+  
+  nav ul li {
+    display: grid;
+    background: rgb(112, 50, 255, 0.4); 
+    width: 10em;
+    border-radius: 100px;
+/*   to round the edges */
+    padding:9px;
+    transform: rotateX(-180deg)rotateY(-180deg)
+        rotateX(180deg) rotateY(-180deg)
+        skewY(-0deg);
+/*   rotateY is what flipped it unside down so when hovered it'll rotate back upwards */
+    border-bottom: 4px solid ;
+/*   this is the bottom shadow */
+    text-shadow:      
+      0 0 1em rgb(374, 22, 90),
+      0 0 0.2em rgb(325, 84, 223),
+      1px 1px 2px rgb(397, 51, 161); 
+/*   the glow of the text */
+     color :hsl(0, 0%, 83%);
+/*     the color of the drop shadow */
+    font-weight: 900;
+/*   the fatness of the letters in the bubble */
+    font-size: 1em; 
+/*   how big the letters are with the bubble */
+   list-style-type: none;
+/*   get rids of the bullet point */
+    text-align: center;
+/*     to make my text int he center */
+    display:inline-block;
+/*     to make the navs in a row and not coloomms */
+
+}
+
+
+ul li:hover{
+    transform: rotateY(0deg) rotateX(0deg) scale(2.02);
+  
+/*   this makes it bigger when you hover :3 */
+    transition: all .5s ease-in-out;
+/*   so it will be flip and move when you hover over it in 5seconds but ease in and out is to amke the transition move better  */
+  }
+  
+  .toggle {
+    display: none;
+    
+/*     without this the open will show even when the page is fully spread */
+  }
+  
+}
+
+/* ----------------Media Query for the pop up bar -------------------- */
+@media only screen and (max-width: 599px) {
+  
+/*   query is if device is less than or equal to 600px, then it'll have a bar
+
+So if the email is opened on an iPhone 5S, with a screen width of 320px, the media query will trigger and all of the styles contained in { … } will take effect. */
+  
+    #nav {
+      transition: transform .3s ease-in;
+      position: fixed;
+      width: 700px;
+      right: -340px;
+/*       keeps the open target to the right of the page */
+     width: 15em;
+     border-radius: 80px;
+/*   to round the edges */
+     padding:1px;
+     border-bottom: 5px solid ;
+/*   this is the bottom shadow */
+     text-shadow:      
+      0 0 1em rgb(374, 22, 90),
+      0 0 .5em rgb(325, 84, 223),
+      2px 1px 2px rgb(397, 51, 161); 
+/*   the glow of the text */
+     color :hsl(0, 0%, 83%);
+/*     the color of the drop shadow */
+    font-weight: 80;
+/*   the fatness of the letters*/
+    font-size: 1.4em; 
+/*   how big the letters are with the bubble */
+   list-style-type: none;
+/*   get rids of the bullet point */
+    text-align: center;  
+ 
+    }
+  
+  /* ------------------Open side animation---------------- */
+  
+    #nav:target {     
+      transform: translateX(-350px);
+      text-decoration: none;
+      
+/*       to get rid of the ugly underlines */
+      
+    }
+  
+    .close {
+      text-align: right;
+      display: block; 
+/*       keeps the X on the top right */
+      font-size: 3.4em;
+/*       position: relative; */
+      top: -30px;
+      text-decoration: none;
+      
+    }
+  
+ .open {
+      text-shadow:      
+      0 0 1em rgb(374, 22, 90),
+      0 0 2em rgb(325, 84, 223),
+      1px 2px 3px rgb(397, 51, 161); 
+     font-size: 1.9em; 
+     text-decoration: none;
+  }
+
