@@ -3,10 +3,106 @@ html,body{
     font-family: Orbitron;
     }
 /* this is a font i will be using on the webpage */
-/* --------------------------------------------------------- */
 
 
-/* ------------my nav for when webpage is full size-------- */
+
+
+/* ----------------------STUPID GRID--------------------- */
+
+body{
+text-shadow:      
+      0 0 1em rgb(374, 22, 90),
+      0 0 .5em rgb(325, 84, 223),
+      2px 1px 2px rgb(397, 51, 161); 
+/*   the glow of the text */
+    color:darkblue;
+  text-align:center;
+}
+/*
+
+@media only screen and (min-width: 600px){
+#content{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+  max-width: 1500px;
+    how big the screen can fit and this makes it fit my whole screen
+  margin: 0 auto;
+  grid-gap: 10px;
+  grid-template-areas:
+    "header header header header"
+    " main main main main"
+    " main main nav nav"
+    "section section section section"
+    "footer footer footer footer"
+     }
+  }
+*/
+
+#content{
+  display: grid;
+    font-size: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px,auto);
+ max-width: 1500px;
+  margin: 0 auto;
+  grid-gap: 10px;
+  grid-template-areas:
+    "header header header header"
+      "main main main aside"
+      "section section section nav"
+      "mainb mainb mainb bside"
+   "mainc mainc mainc cside"
+      "footer footer footer footer"
+/*    "section section section section"*/
+}
+  
+  
+ 
+
+#content > *{
+  background: rgb(111, 190, 246, 0.2);
+/*      background: rgb(189, 195, 255, 0.4);*/
+  padding: 20px;
+}
+
+
+header{
+  grid-area: header;
+}
+main{
+  grid-area: main;
+}
+mainb{
+  grid-area: mainb;
+}
+mainc{
+  grid-area: mainc;
+}
+section{
+  grid-area: section;
+}
+aside{
+  grid-area: aside;
+}
+bside{
+  grid-area: bside;
+}
+cside{
+  grid-area: cside;
+}
+nav{
+  grid-area: nav;
+}
+footer{
+  grid-area: footer;
+}
+
+
+
+
+/* ------------my nav -------- */
+
 nav a {
     text-decoration: none;
     color: rgb(104, 0, 191, 1) ;
@@ -22,21 +118,21 @@ nav a {
 
 /* The item thingy when it's small */
 .container > * {
-/*   color: #353535; */
-  /*   the color of the text when it's smol */
   font-size: 1.2em;
   line-height: 1.9;
 /*   how big the bubbles are */
   padding: 25px;
 /*   thickness of my bar */
   background: rgb(67, 361, 247,0.4);
+   
   
   
 }
 
-/* ----------------For the nav side bar when small---------- */
+/* ----------------For the nav ---------- */
 .container nav {
-  background: rgb(0, 171, 255, 0.2);
+/*    background: rgb(158, 88, 455, .3);*/
+     background: rgb(148, 158, 250, 0.4);
 }
 
 nav ul {
@@ -52,12 +148,12 @@ nav ul {
     
   /* grid */
   .container {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
    
   }
   
   .container nav{
-    grid-column: span 6;
+    grid-column: span 4;
   }
 
   
@@ -114,7 +210,7 @@ ul li:hover{
 }
 
 /* ----------------Media Query for the pop up bar -------------------- */
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 600px) {
   
 /*   query is if device is less than or equal to 600px, then it'll have a bar
 
@@ -178,4 +274,32 @@ So if the email is opened on an iPhone 5S, with a screen width of 320px, the med
      font-size: 1.9em; 
      text-decoration: none;
   }
+    
+/*    -------------video-------------------*/
+    
+.frame-container {
+position: relative;
+/*    relative is when the positioning is same on top and bottom*/
+padding-bottom: 50%;
+/*    since the height and width are 100% on the bottom i would assume it should be half that when the container is smaller??? it seems to work?
+    ASK CRAIG FOR HALP T_T */
+padding-top: 30px;
+}
 
+.frame-container iframe {
+position: absolute;
+/*    absolute lets the video be anywhere on my page! */
+top: 0;
+/*    had to add a top or the video was wobbling everywhere when shrunken LOL am i even spelling this correctly*/
+right: 0;
+/*    ok i put a bottom but that sh*t didnt work so im here using left and right.. i honestly dont know what it does excatly but i know that without it the video was weird with just top. so with right it looks like its cropping from the right when i shrink the page?? */
+width: 100%;
+height: 100%;
+/*    both need to be 100% so then my embed trash video can expand to the full width of what it is some where online said to use 100% so i don't question it */
+}
+
+/*    --------picture-------*/
+    .responsive {
+  width: 100%;
+  height: auto;
+}

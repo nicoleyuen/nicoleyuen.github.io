@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+html,body{
+    font-family: Orbitron;
+    }
+/* this is a font i will be using on the webpage */
+
+
+
+
+/* ----------------------STUPID GRID--------------------- */
+
+body{
+    color:darkblue;
+  text-align:center;
+}
+/*
+
+@media only screen and (min-width: 600px){
+#content{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+  max-width: 1500px;
+    how big the screen can fit and this makes it fit my whole screen
+  margin: 0 auto;
+  grid-gap: 10px;
+  grid-template-areas:
+    "header header header header"
+    " main main main main"
+    " main main nav nav"
+    "section section section section"
+    "footer footer footer footer"
+     }
+  }
+*/
+
+#content{
+  display: grid;
+    font-size: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px,auto);
+ max-width: 1500px;
+  margin: 0 auto;
+  grid-gap: 10px;
+  grid-template-areas:
+    "header header header header"
+      "main main main main"
+        "main main main main"
+            "main main main main"
+
+
+/*    "section section section section"*/
+}
+  
+  
+ 
+
+#content > *{
+  background: rgb(111, 190, 246, 0.2);
+/*      background: rgb(189, 195, 255, 0.4);*/
+  padding: 20px;
+}
+
+
+header{
+  grid-area: header;
+    
+}
+main{
+  grid-area: main;
+}
+
+
+
+
+
+
+/* ------------my nav -------- */
+
+nav a {
+    text-decoration: none;
+    color: rgb(104, 0, 191, 1) ;
+/*   a color over my tect bubbles */
+/* this is to get rid of the stupid underline for the aref links */
+  }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  transition: all .3s ease-in-out;
+}
+
+/* The item thingy when it's small */
+.container > * {
+  font-size: 1.2em;
+  line-height: 1.9;
+/*   how big the bubbles are */
+  padding: 25px;
+/*   thickness of my bar */
+  background: rgb(67, 361, 247,0.4);
+   
+  
+  
+}
+
+/* ----------------For the nav ---------- */
+.container nav {
+/*    background: rgb(158, 88, 455, .3);*/
+     background: rgb(148, 158, 250, 0.4);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* ------------Media query to change color when shrunk--------------- */
+@media only screen and (min-width: 600px) {
+  
+    
+  /* grid */
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+   
+  }
+  
+  .container nav{
+    grid-column: span 4;
+  }
+
+  
+  /* ----------------Grid/ my css animation when hovered-------------- */
+  
+  nav ul li {
+    display: grid;
+    background: rgb(112, 50, 255, 0.4); 
+    width: 10em;
+    border-radius: 100px;
+/*   to round the edges */
+    padding:9px;
+    transform: rotateX(-180deg)rotateY(-180deg)
+        rotateX(180deg) rotateY(-180deg)
+        skewY(-0deg);
+/*   rotateY is what flipped it unside down so when hovered it'll rotate back upwards */
+    border-bottom: 4px solid ;
+/*   this is the bottom shadow */
+    text-shadow:      
+      0 0 1em rgb(374, 22, 90),
+      0 0 0.2em rgb(325, 84, 223),
+      1px 1px 2px rgb(397, 51, 161); 
+/*   the glow of the text */
+     color :hsl(0, 0%, 83%);
+/*     the color of the drop shadow */
+    font-weight: 900;
+/*   the fatness of the letters in the bubble */
+    font-size: 1em; 
+/*   how big the letters are with the bubble */
+   list-style-type: none;
+/*   get rids of the bullet point */
+    text-align: center;
+/*     to make my text int he center */
+    display:inline-block;
+/*     to make the navs in a row and not coloomms */
+
+}
+
+
+ul li:hover{
+    transform: rotateY(0deg) rotateX(0deg) scale(2.02);
+  
+/*   this makes it bigger when you hover :3 */
+    transition: all .5s ease-in-out;
+/*   so it will be flip and move when you hover over it in 5seconds but ease in and out is to amke the transition move better  */
+  }
+  
+  .toggle {
+    display: none;
+    
+/*     without this the open will show even when the page is fully spread */
+  }
+  
+}
+
+/* ----------------Media Query for the pop up bar -------------------- */
+@media only screen and (max-width: 600px) {
+  
+/*   query is if device is less than or equal to 600px, then it'll have a bar
+
+So if the email is opened on an iPhone 5S, with a screen width of 320px, the media query will trigger and all of the styles contained in { … } will take effect. */
+  
+    #nav {
+      transition: transform .3s ease-in;
+      position: fixed;
+      width: 700px;
+      right: -340px;
+/*       keeps the open target to the right of the page */
+     width: 15em;
+     border-radius: 80px;
+/*   to round the edges */
+     padding:1px;
+     border-bottom: 5px solid ;
+/*   this is the bottom shadow */
+     text-shadow:      
+      0 0 1em rgb(374, 22, 90),
+      0 0 .5em rgb(325, 84, 223),
+      2px 1px 2px rgb(397, 51, 161); 
+/*   the glow of the text */
+     color :hsl(0, 0%, 83%);
+/*     the color of the drop shadow */
+    font-weight: 80;
+/*   the fatness of the letters*/
+    font-size: 1.4em; 
+/*   how big the letters are with the bubble */
+   list-style-type: none;
+/*   get rids of the bullet point */
+    text-align: center;  
+ 
+    }
+  
+  /* ------------------Open side animation---------------- */
+  
+    #nav:target {     
+      transform: translateX(-350px);
+      text-decoration: none;
+      
+/*       to get rid of the ugly underlines */
+      
+    }
+  
+    .close {
+      text-align: right;
+      display: block; 
+/*       keeps the X on the top right */
+      font-size: 3.4em;
+/*       position: relative; */
+      top: -30px;
+      text-decoration: none;
+      
+    }
+  
+ .open {
+      text-shadow:      
+      0 0 1em rgb(374, 22, 90),
+      0 0 2em rgb(325, 84, 223),
+      1px 2px 3px rgb(397, 51, 161); 
+     font-size: 1.9em; 
+     text-decoration: none;
+  }
+    
+
+/*    --------picture-------*/
+    .responsive {
+  width: 100%;
+  height: 100%;
+}

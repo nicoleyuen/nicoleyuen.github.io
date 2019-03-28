@@ -1,0 +1,53 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+     <meta name="Nicole's wensite 2" content="trying out css">
+    <meta name="author" content="Nicole Yuen">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicole</title>
+    <link rel="stylesheet" href="css/stylep3.css">
+
+        <div class="container">
+
+          <a class="toggle open" id="open" href="#nav">OPEN</a>
+
+          <nav id="nav" role="navigation">  
+            <a class="toggle close" id="close" href="#">×</a>
+            <ul>
+                            <li onclick="select(this)">
+        <!-- onclick is like a mousemove where my mouse makes the effect when I hover over it -->
+
+                           <a href="index.html"> <span>Home</span> </a>
+                            </li>
+                            <li onclick="select(this)">
+                               <a href="p1.html"> <span>About</span> </a>
+                            </li>
+                         <li onclick="select(this)">
+                                 <a href="p2.html"> <span>Gallery</span> </a>
+                            </li> 
+                            <li onclick="select(this)">
+                                <a href="p3.html"> <span>Artist CV</span> </a>
+                            </li>
+                          <li onclick="select(this)">
+                                <a href="p4.html"> <span>Contact</span> </a>
+                            </li> 
+                        </ul>
+          </nav>
+        </div>
+
+  </head>
+
+<body>
+  <div id="content">
+  <header> <br>Artist CV </header>
+  <main>
+    <embed src="image/cv.pdf" width="800px" height="900px"  class="responsive" />
+
+    </main>
+    
+
+    
+  </div>
+</body>
+</html>
