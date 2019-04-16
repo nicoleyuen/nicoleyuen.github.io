@@ -287,7 +287,7 @@ padding-top: 30px;
 }
 
 .frame-container iframe {
-position: absolute;
+/*position: absolute;*/
 /*    absolute lets the video be anywhere on my page! */
 top: 0;
 /*    had to add a top or the video was wobbling everywhere when shrunken LOL am i even spelling this correctly*/
