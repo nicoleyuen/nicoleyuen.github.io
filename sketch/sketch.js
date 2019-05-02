@@ -21,9 +21,9 @@ function draw() {
      //Saw a defination in w3schools and I want to try it on my website so people can randomly draw on my website lol
     
   
-  var a = map(mouseX, 0, width , 10, 300);
+  var a = map(mouseX, 0, width , 30, 500);
      // this remaps a number from one place to another and right now it is reading where mouse x is and re mapping it
-  var b = map(mouseY, 0, height, 10, 300);
+  var b = map(mouseY, 0, height, 30,500);
      // this one is for the mouse Y
   
   // My nested loop 
@@ -35,13 +35,13 @@ function draw() {
     // for each initialization m is equal to 1 . then we test if m is less than 9 to see if the loop should continue. then we will update m by changing the value and variable to run the test again by 1 increment per loop.
     push();
     // pushing is adding the item at the end of the loop so this keeps pushing out the shapes of the circle
-    rotate(m*TWO_PI/9);
+    rotate(m*TWO_PI/4.5);
     // rotation variable m times 2pi divided by 4.5 
     //TWO_PI is twice the circumference of the circle so i think think of it as a 360 so it circles that times what the variable is. then I divided it by 4.5 cos 9/2 is 4.5?? (learn better math LOL) 
     // when divided by half it was too much spacing so when the number is like a quarter of it, it spaced out better
     translate(0, a);
     // if called then it will reset to where it orginally was... the push adn the pop is the one that controls this 
-    rect(touches[i].x, touches[i].y,35,35);
+    rect(touches[i].x, touches[i].y,10,10);
     // each touch from the x and y coordinate will draw out this circle
     //[] is my array for the color
     noFill();
@@ -54,9 +54,9 @@ function draw() {
   rotate(angle);
   for (var j=0; j<9; j++) {
     push();
-    rotate(j*TWO_PI/9);
+    rotate(j*TWO_PI/4.5);
     translate(0, b);
-    rect(touches[i].x, touches[i].y,35,35);
+    rect(touches[i].x, touches[i].y,10,10);
     noFill();
     stroke(pika[i]);
   
@@ -67,9 +67,9 @@ function draw() {
   rotate(angle);
   for (var k=0; k<9; k++) {
     push();
-    rotate(k*TWO_PI/9);
+    rotate(k*TWO_PI/4.5);
     translate(0, 50);
-    rect(touches[i].x, touches[i].y,35,35);
+    rect(touches[i].x, touches[i].y,10,10);
     noFill();
     stroke(pika[i]);
  
