@@ -41,7 +41,7 @@ function draw() {
     // when divided by half it was too much spacing so when the number is like a quarter of it, it spaced out better
     translate(0, a);
     // if called then it will reset to where it orginally was... the push adn the pop is the one that controls this 
-    rect(touches[i].x,10,touches[i].y,10);
+    rect(touches[i].x, touches[i].y, 10,10);
     // each touch from the x and y coordinate will draw out this circle
     //[] is my array for the color
     noFill();
@@ -56,7 +56,7 @@ function draw() {
     push();
     rotate(j*TWO_PI/4.5);
     translate(0, b);
-    rect(touches[i].x,10,touches[i].y,10);
+    rect(touches[i].x, touches[i].y,10,10);
     noFill();
     stroke(pika[i]);
   
@@ -69,7 +69,7 @@ function draw() {
     push();
     rotate(k*TWO_PI/4.5);
     translate(0, 50);
-    rect(touches[i].x,10,touches[i].y,10);
+    rect(touches[i].x, touches[i].y,10,10);
     noFill();
     stroke(pika[i]);
  
