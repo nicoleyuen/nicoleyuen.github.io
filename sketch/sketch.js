@@ -41,7 +41,7 @@ function draw() {
     // when divided by half it was too much spacing so when the number is like a quarter of it, it spaced out better
     translate(0, a);
     // if called then it will reset to where it orginally was... the push adn the pop is the one that controls this 
-    rect(touches[i].x, touches[i].y, 10,10);
+    rect(touches[i].x, touches[i].y, 20,20);
     // each touch from the x and y coordinate will draw out this circle
     //[] is my array for the color
     noFill();
