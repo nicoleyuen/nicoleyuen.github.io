@@ -56,7 +56,7 @@ function draw() {
     push();
     rotate(j*TWO_PI/4.5);
     translate(0, b);
-    rect(touches[i].x, touches[i].y,10,10);
+    rect(touches[i].x, touches[i].y,20,20);
     noFill();
     stroke(pika[i]);
   
@@ -69,7 +69,7 @@ function draw() {
     push();
     rotate(k*TWO_PI/4.5);
     translate(0, 50);
-    rect(touches[i].x, touches[i].y,10,10);
+    rect(touches[i].x, touches[i].y,20,20);
     noFill();
     stroke(pika[i]);
  
