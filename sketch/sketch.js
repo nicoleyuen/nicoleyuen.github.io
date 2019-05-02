@@ -35,7 +35,7 @@ function draw() {
     // for each initialization m is equal to 1 . then we test if m is less than 9 to see if the loop should continue. then we will update m by changing the value and variable to run the test again by 1 increment per loop.
     push();
     // pushing is adding the item at the end of the loop so this keeps pushing out the shapes of the circle
-    rotate(m*TWO_PI/4.5);
+    rotate(m*TWO_PI/9);
     // rotation variable m times 2pi divided by 4.5 
     //TWO_PI is twice the circumference of the circle so i think think of it as a 360 so it circles that times what the variable is. then I divided it by 4.5 cos 9/2 is 4.5?? (learn better math LOL) 
     // when divided by half it was too much spacing so when the number is like a quarter of it, it spaced out better
@@ -54,7 +54,7 @@ function draw() {
   rotate(angle);
   for (var j=0; j<9; j++) {
     push();
-    rotate(j*TWO_PI/4.5);
+    rotate(j*TWO_PI/9);
     translate(0, b);
     rect(touches[i].x, touches[i].y,35,35);
     noFill();
@@ -67,7 +67,7 @@ function draw() {
   rotate(angle);
   for (var k=0; k<9; k++) {
     push();
-    rotate(k*TWO_PI/4.5);
+    rotate(k*TWO_PI/9);
     translate(0, 50);
     rect(touches[i].x, touches[i].y,35,35);
     noFill();
