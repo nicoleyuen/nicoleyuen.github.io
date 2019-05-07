@@ -7,7 +7,7 @@ var symbolSize = 15;
 
 function setup() {
   createCanvas(
-window.innerWidth,window.innerHeight
+displayWidth, displayHeight
   );
   background(0);
   // black background
@@ -147,6 +147,6 @@ function touchMoved() {
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth,windowHeight);
+  resizeCanvas(displayWidth, displayHeight);
 }
 
