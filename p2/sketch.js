@@ -6,9 +6,9 @@ var symbolSize = 15;
 // this is a global variable to make the character/ text size bigger
 
 function setup() {
-  createCanvas(
-  displayWidth, displayHeight
-  );
+ createCanvas(windowWidth, windowHeight);
+  
+  
   background(0);
   // black background
   
