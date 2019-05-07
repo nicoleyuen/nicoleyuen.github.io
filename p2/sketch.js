@@ -1,7 +1,7 @@
 //https://www.youtube.com/watch?v=S1TQCi9axzg
 
 var streams = [];
-var symbolSize = 150;
+var symbolSize = 120;
 // this is a global variable to make the character/ text size bigger
 
 function setup() {
