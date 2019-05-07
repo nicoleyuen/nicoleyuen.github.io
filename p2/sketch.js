@@ -1,7 +1,7 @@
 //https://www.youtube.com/watch?v=S1TQCi9axzg
 
 var streams = [];
-var symbolSize = 15;
+var symbolSize = 45;
 // this is a global variable to make the character/ text size bigger
 
 function setup() {
@@ -19,7 +19,7 @@ function setup() {
   for (var i = 0; i <= width / symbolSize; i++) {
     //start the loop of 0 and divide it by the width of the screen to get the total number of the screen
     var stream = new Stream();
-    stream.generateSymbols(x, random(-2000, 0));
+    stream.generateSymbols(x, random(-3000, 0));
     // this will generate the su=ymbols 
     // to make the symbols and the random will make it come out at random spots
     streams.push(stream);
@@ -100,7 +100,7 @@ function Symbol(x, y, speed, first) {
 function Stream() {
   this.symbols = []; //array
   this.totalSymbols = round(random(5, 60)); //know range it can pick from so each one is different
-  this.speed = random(5, 20);
+  this.speed = random(20, 20);
 
   this.generateSymbols = function(x, y) {
     // function(x, y) so we don't hard code the x and y into it
