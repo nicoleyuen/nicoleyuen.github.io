@@ -7,8 +7,8 @@ var symbolSize = 15;
 
 function setup() {
   createCanvas(
-   window.innerWidth,
-    window.innerHeight
+   window.width,
+    window.height
   );
   background(0);
   // black background
