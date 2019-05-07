@@ -1,7 +1,7 @@
 //https://www.youtube.com/watch?v=S1TQCi9axzg
 
 var streams = [];
-var symbolSize = 35;
+var symbolSize = 25;
 // this is a global variable to make the character/ text size bigger
 
 function setup() {
@@ -100,7 +100,7 @@ function Symbol(x, y, speed, first) {
 function Stream() {
   this.symbols = []; //array
   this.totalSymbols = round(random(5, 60)); //know range it can pick from so each one is different
-  this.speed = random(5, 20);
+  this.speed = random(20, 20);
 
   this.generateSymbols = function(x, y) {
     // function(x, y) so we don't hard code the x and y into it
