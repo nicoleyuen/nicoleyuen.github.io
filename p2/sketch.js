@@ -43,12 +43,14 @@ function draw() {
   });
   /////////////////the touch part///////////////
 
-    fill(pika[i]);
+    fill(180, 255, 180);
   for (var i = 0; i < touches.length; i++) {
     rect(touches[i].x, touches[i].y,
             1, );
   }
-
+      noFill();
+    stroke(pika[i]);
+}
 
 
 function Symbol(x, y, speed, first) {
