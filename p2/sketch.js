@@ -42,13 +42,13 @@ function draw() {
     // have the stream render out
   });
   /////////////////the touch part///////////////
-    fill(180, 255, 180);
+
   for (var i = 0; i < touches.length; i++) {
     rect(touches[i].x, touches[i].y,
             1, );
   }
-      noFill();
-    stroke(pika[i]);
+
+    fill(pika[i]);
 }
 
 function Symbol(x, y, speed, first) {
