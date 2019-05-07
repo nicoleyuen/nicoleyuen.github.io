@@ -19,7 +19,7 @@ function setup() {
   for (var i = 0; i <= width / symbolSize; i++) {
     //start the loop of 0 and divide it by the width of the screen to get the total number of the screen
     var stream = new Stream();
-    stream.generateSymbols(x, random(-3000, 0));
+    stream.generateSymbols(x, random(-2000, 0));
     // this will generate the su=ymbols 
     // to make the symbols and the random will make it come out at random spots
     streams.push(stream);
