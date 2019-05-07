@@ -43,13 +43,13 @@ function draw() {
   });
   /////////////////the touch part///////////////
 
+    fill(pika[i]);
   for (var i = 0; i < touches.length; i++) {
     rect(touches[i].x, touches[i].y,
             1, );
   }
 
-    fill(pika[i]);
-}
+
 
 function Symbol(x, y, speed, first) {
   this.x = x;
