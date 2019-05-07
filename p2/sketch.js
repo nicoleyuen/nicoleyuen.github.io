@@ -30,7 +30,7 @@ function setup() {
 
 
   textSize(symbolSize);
-  pika = [color(81, 194, 255), color(183, 142, 250), color(233, 11, 159), color(11, 233, 181), color(255, 252, 81)];
+  pika = [color(183, 142, 250), color(81, 194, 255), color(233, 11, 159), color(11, 233, 181), color(255, 252, 81)];
 }
 
 
