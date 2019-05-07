@@ -146,7 +146,3 @@ function touchMoved() {
   return false;
 }
 
-function windowResized() {
-  resizeCanvas(displayWidth, displayHeight);
-}
-
