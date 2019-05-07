@@ -37,7 +37,7 @@ function setup() {
 
 
 function draw() {
-  background(0);
+  background(0,110);
   // so this will cover the long drag of the letter falling and wiht a second one, it'll make that glowing effect
   streams.forEach(function(stream) {
     stream.render();
