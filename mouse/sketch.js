@@ -6,13 +6,13 @@ function setup() {
   // this is to fit what people's phones will fit
   noFill();
 
-  //blue, purple, pink, green, yellow
+  // blue, purple, pink, green, yellow
 //   these are the colors of each click also the color of the array from each touch
 // https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool   where i can pick a nice color
 }
 
 function draw() {
-    background(255);
+    background(0);
 
      //Saw a defination in w3schools and I want to try it on my website so people can randomly draw on my website lol
     
@@ -41,6 +41,7 @@ function draw() {
     
     // each touch from the x and y coordinate will draw out this circle
     //[] is my array for the color
+    stroke(255);
  
     
 
@@ -50,6 +51,7 @@ function draw() {
     rotate(j*TWO_PI/4.5);
     translate(0, b);
     rect(10,10,10,10);
+    stroke(255);
 
   
     //this is the second loop of hte nested loop of the circles and this one is remapping to what I wrote l1 should be so it is the Y
@@ -62,6 +64,7 @@ function draw() {
     rotate(k*TWO_PI/4.5);
     translate(0, 50);
     rect(10,10,10,10);
+    stroke(255);
 
  
     
